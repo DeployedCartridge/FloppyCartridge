@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Windows 95 Simulator</title>
+  <link rel="stylesheet" href="style.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <!-- Desktop -->
+  <div id="desktop">
+    <!-- Calculator window -->
+    <div class="window" id="calcWindow">
+      <div class="title-bar">
+        <span>Calculator</span>
+        <button class="close" onclick="closeWindow('calcWindow')">X</button>
+      </div>
+      <div class="window-content">
+        <input type="text" id="calcDisplay" readonly />
+        <div id="calcButtons"></div>
+      </div>
+    </div>
+
+    <!-- File Explorer window -->
+    <div class="window" id="explorerWindow">
+      <div class="title-bar">
+        <span>File Explorer</span>
+        <button class="close" onclick="closeWindow('explorerWindow')">X</button>
+      </div>
+      <div class="window-content">
+        <p>[Mock file explorer layout goes here]</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Taskbar -->
+  <div id="taskbar">
+    <button id="startBtn">Start</button>
+    <div id="taskbar-right">
+      <span id="clock">00:00</span>
+    </div>
+  </div>
+</body>
+</html>
