@@ -1,60 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Windows 95 Simulator</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <title>Windows 2000 Emulator</title>
+  <style>
+    body {
+      margin: 0;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    iframe {
+      border: none;
+      width: 1024px;
+      height: 768px;
+    }
+  </style>
 </head>
 <body>
-  <!-- Boot overlay (black screen) -->
-  <div id="boot-overlay"></div>
-
-  <!-- Taskbar -->
-  <div class="taskbar">
-    <button class="start-button" onclick="toggleStartMenu()">Start</button>
-    <div class="clock" id="clock"></div>
-  </div>
-
-  <!-- Start Menu -->
-  <div id="start-menu" class="start-menu hidden">
-    <button onclick="openCalculator()">Calculator</button>
-    <button onclick="openFileExplorer()">File Explorer</button>
-  </div>
-
-  <!-- Calculator App -->
-  <div id="calculator" class="window hidden">
-    <div class="title-bar">
-      <span>Calculator</span>
-      <div class="title-buttons">
-        <img src="assets/title_minimize.png" onclick="minimizeWindow('calculator')" />
-        <img src="assets/title_maximize.png" />
-        <img src="assets/title_close.png" onclick="closeWindow('calculator')" />
-      </div>
-    </div>
-    <div class="window-body">
-      <input type="text" id="calc-display" disabled />
-      <div class="calc-buttons">
-        <button onclick="appendCalc('7')">7</button>
-        <button onclick="appendCalc('8')">8</button>
-        <button onclick="appendCalc('9')">9</button>
-        <button onclick="appendCalc('/')">/</button>
-        <button onclick="appendCalc('4')">4</button>
-        <button onclick="appendCalc('5')">5</button>
-        <button onclick="appendCalc('6')">6</button>
-        <button onclick="appendCalc('*')">*</button>
-        <button onclick="appendCalc('1')">1</button>
-        <button onclick="appendCalc('2')">2</button>
-        <button onclick="appendCalc('3')">3</button>
-        <button onclick="appendCalc('-')">-</button>
-        <button onclick="appendCalc('0')">0</button>
-        <button onclick="appendCalc('.')">.</button>
-        <button onclick="calculate()">=</button>
-        <button onclick="appendCalc('+')">+</button>
-        <button onclick="clearCalc()">C</button>
-      </div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
+  <iframe 
+    src="https://bellard.org/jslinux/vm.html?url=win2k.cfg&mem=192&graphic=1&w=1024&h=768" 
+    allowfullscreen
+  ></iframe>
 </body>
 </html>
