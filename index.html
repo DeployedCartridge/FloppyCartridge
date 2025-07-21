@@ -1,6 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <script>
+    // Track which keys are currently pressed
+    const pressedKeys = new Set();
+
+    document.addEventListener('keydown', function(event) {
+      // Add the pressed key to the set
+      pressedKeys.add(event.key.toLowerCase());
+
+      // Check if 'e', 'a', and 'g' are all pressed
+      if (pressedKeys.has('e') && pressedKeys.has('a') && pressedKeys.has('g')) {
+        // Open a file (simulate by opening a URL)
+        window.open('file.html', '_blank');
+      }
+    });
+
+    document.addEventListener('keyup', function(event) {
+      // Remove the released key from the set
+      pressedKeys.delete(event.key.toLowerCase());
+    });
+  </script>
   <meta charset="UTF-8">
   <title>Windows 2000 Emulator</title>
   <style>
