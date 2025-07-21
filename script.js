@@ -55,6 +55,6 @@ function openFileExplorer() {
   overlay.style.display = "block";
 
   setTimeout(() => {
-    window.location.href = "logreader.html";
+    window.location.href = "Cartridges/logs/logreader.html";
   }, 10000);
 }
