@@ -1,0 +1,29 @@
+.title-bar {
+  background-color: #0000aa; /* Win95 blue */
+  color: white;
+  font-family: 'Courier New', monospace;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 5px;
+  height: 24px;
+  border: 2px solid black;
+}
+
+.window-buttons {
+  display: flex;
+  gap: 2px;
+}
+
+.btn {
+  width: 24px;
+  height: 24px;
+  background-image: url("assets/images.png");
+  background-repeat: no-repeat;
+  background-size: 72px 24px; /* 3 buttons, 24px each */
+  cursor: pointer;
+}
+
+#minimizeBtn { background-position: 0 0; }
+#maximizeBtn { background-position: -24px 0; }
+#closeBtn    { background-position: -48px 0; }
